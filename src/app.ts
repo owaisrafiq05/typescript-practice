@@ -440,19 +440,91 @@
 
 
 //Question 40
-function make_album(artist: string, title: string, tracks?: number): { artist: string, title: string, tracks?: number } {
-    let album: { artist: string, title: string, tracks?: number } = {
-        artist: artist,
-        title: title
-    };
-    if (tracks) {
-        album.tracks = tracks;
-    }
-    return album;
-}
-let album1 = make_album('Artist1', 'Album1');
-let album2 = make_album('Artist2', 'Album2', 12);
-let album3 = make_album('Artist3', 'Album3', 8);
-console.log(album1);
-console.log(album2);
-console.log(album3);
+// function make_album(artist: string, title: string, tracks?: number): { artist: string, title: string, tracks?: number } {
+//     let album: { artist: string, title: string, tracks?: number } = {
+//         artist: artist,
+//         title: title
+//     };
+//     if (tracks) {
+//         album.tracks = tracks;
+//     }
+//     return album;
+// }
+// let album1 = make_album('Artist1', 'Album1');
+// let album2 = make_album('Artist2', 'Album2', 12);
+// let album3 = make_album('Artist3', 'Album3', 8);
+// console.log(album1);
+// console.log(album2);
+// console.log(album3);
+
+
+//Question 41
+// function show_magicians(magicians : string[] , num : number){
+//     for (let i = 0; i < num; i++) {
+//         console.log(`Magician no ${i+1} : ${magicians[i]}\n`);
+//     }
+// }
+// let num = 3;
+// let magicians = ["Owais","Umer","Ali"];
+// show_magicians(magicians,num); 
+
+// //Question 42
+// function make_great(magicians: string[] , num : number){
+//     for (let i = 0; i < num ; i++) {
+//         magicians[i] = `the Great ${magicians[i]}`;
+//     }
+// }
+// function show_magicians(magicians : string[] , num : number){
+//     for (let i = 0; i < num; i++) {
+//         console.log(`Magician no ${i+1} : ${magicians[i]}\n`);
+//     }
+// }
+// let num = 3;
+// let magicians = ["Owais","Umer","Ali"];
+// make_great(magicians,num);
+// show_magicians(magicians,num); 
+
+//Question 43
+// function make_great(magicians: string[], num: number) {
+//     for (let i = 0; i < magicians.length && i < num; i++) {
+//         magicians[i] = `the Great ${magicians[i]}`;
+//     }
+// }
+// function show_magicians(magicians: string[]){
+//     for (let i = 0; i < magicians.length; i++) {
+//         console.log(`Magician no ${i + 1}: ${magicians[i]}\n`);
+//     }
+// }
+// let num: number = 3;
+// let magicians: string[] = ["Owais", "Umer", "Ali"];
+// make_great(magicians, num);
+// show_magicians(magicians);
+
+//Question 44
+// function make_sandwich(...items: string[]){
+//     console.log("Sandwich Summary:");
+//     console.log("Bread");
+//     for (let item of items) {
+//         console.log(item);
+//     }
+//     console.log("Bread\n");
+// }
+// make_sandwich('Ham', 'Cheese', 'Lettuce');
+// make_sandwich('Turkey', 'Tomato');
+// make_sandwich('Peanut Butter', 'Jelly', 'Banana', 'Honey');
+
+//Question 45
+// function createCar(manufacturer: string, model: string, ...details: { [key: string]: any }[]): { manufacturer: string, model: string, [key: string]: any } {
+//     let car: { manufacturer: string, model: string, [key: string]: any } = {
+//         manufacturer: manufacturer,
+//         model: model
+//     };
+//     for (let detail of details) {
+//         for (let key in detail) {
+//             car[key] = detail[key];
+//         }
+//     }
+//     return car;
+// }
+// let carInfo = createCar('Toyota', 'Camry', { color: 'Blue', year: 2022, features: ['Navigation', 'Sunroof'] });
+// console.log(carInfo);
