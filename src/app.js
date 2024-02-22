@@ -272,15 +272,15 @@
 //     }
 // }
 //Question 30
-var names = ["admin", "ali", "umer", "owais"];
-for (var i = 0; i < names.length; i++) {
-    if (names[i] == "admin") {
-        console.log("Hello admin, would you like to see a status report?");
-    }
-    else {
-        console.log("Hello ".concat(names[i], ", thank you for logging in again."));
-    }
-}
+// let names = ["admin", "ali", "umer", "owais"];
+// for (let i = 0; i < names.length; i++) {
+//     if(names[i] == "admin"){
+//         console.log("Hello admin, would you like to see a status report?");
+//     }
+//     else{
+//         console.log(`Hello ${names[i]}, thank you for logging in again.`);
+//     }
+// }
 //Question 31
 // let age = 18;
 // if(age < 2){
@@ -305,24 +305,84 @@ for (var i = 0; i < names.length; i++) {
 //     console.log("We need some users");
 // }
 //Question 32
-// Make a list of current users
-var current_users = ['john', 'mary', 'emma', 'david', 'chris'];
-// Make a list of new users
-var new_users = ['emma', 'chris', 'lisa', 'sam', 'joe'];
-var _loop_1 = function (new_user) {
-    // Check if the new username exists in the current users list (case insensitive)
-    var usernameExists = current_users.some(function (user) { return user.toLowerCase() === new_user.toLowerCase(); });
-    // If the username exists, print a message to enter a new username
-    if (usernameExists) {
-        console.log("Username '".concat(new_user, "' is not available. Please enter a new username."));
+// let current_users: string[] = ['john', 'mary', 'emma', 'david', 'chris'];
+// let new_users: string[] = ['emma', 'chris', 'lisa', 'sam', 'joe'];
+// for (let new_user of new_users) {
+//     let usernameExists = current_users.some(user => user.toLowerCase() === new_user.toLowerCase());
+//     if (usernameExists) {
+//         console.log(`Username '${new_user}' is not available. Please enter a new username.`);
+//     } else {
+//         console.log(`Username '${new_user}' is available.`);
+//     }
+// }
+//Question 33
+// let arr = [1,2,3,4,5,6,7,8,9];
+// for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] == 1){
+//         console.log(`${arr[i]}st`);
+//     }
+//     else if(arr[i] == 2){
+//         console.log(`${arr[i]}nd`);
+//     }
+//     else if(arr[i] == 3){
+//         console.log(`${arr[i]}rd`);
+//     }
+//     else{
+//         console.log(`${arr[i]}th`);
+//     }
+// }
+//Question 34
+// let fav_pizza = ["creamy tikka","chipotle","chicken tikka"];
+// for (let i = 0; i < fav_pizza.length; i++) {
+//     console.log(`I like ${fav_pizza[i]} pizza`);
+// }
+// console.log("What pizza do you like?");
+// //Question 35
+// let animals = ['dog', 'cat', 'rabbit'];
+// for (let i = 0; i < 3 ; i++) {
+//     console.log(`A ${animals[i]} would make a great pet.`);
+// }
+// console.log("Any of these animals would make a great pet!");
+//Question 36
+// function make_shirt(size: string, message: string): void {
+//     console.log(`The shirt size is ${size} and it will have the following message: "${message}".`);
+// }
+// make_shirt('medium', 'Hello, world!');
+//Question 37
+// function make_shirt(size: string = 'large', message: string = 'I love TypeScript'): void {
+//     console.log(`The shirt size is ${size} and it will have the following message: "${message}".`);
+// }
+// make_shirt();
+// make_shirt('medium');
+// make_shirt('small', 'Hello, world!');
+//Question 38
+// function describe_city(city: string, country: string = 'Pakistan'): void {
+//     console.log(`${city} is in ${country}.`);
+// }
+// describe_city('Karachi');
+// describe_city('London', 'United Kingdom');
+// describe_city('New York', 'USA');
+//Question 39
+// function city_country(city: string, country: string): string {
+//     return `${city}, ${country}`;
+// }
+// console.log(city_country('Lahore', 'Pakistan'));
+// console.log(city_country('Paris', 'France'));
+// console.log(city_country('New York', 'USA'));
+//Question 40
+function make_album(artist, title, tracks) {
+    var album = {
+        artist: artist,
+        title: title
+    };
+    if (tracks) {
+        album.tracks = tracks;
     }
-    else {
-        // If the username does not exist, print a message that the username is available
-        console.log("Username '".concat(new_user, "' is available."));
-    }
-};
-// Loop through the new users list
-for (var _i = 0, new_users_1 = new_users; _i < new_users_1.length; _i++) {
-    var new_user = new_users_1[_i];
-    _loop_1(new_user);
+    return album;
 }
+var album1 = make_album('Artist1', 'Album1');
+var album2 = make_album('Artist2', 'Album2', 12);
+var album3 = make_album('Artist3', 'Album3', 8);
+console.log(album1);
+console.log(album2);
+console.log(album3);

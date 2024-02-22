@@ -374,3 +374,85 @@
 //         console.log(`Username '${new_user}' is available.`);
 //     }
 // }
+
+//Question 33
+// let arr = [1,2,3,4,5,6,7,8,9];
+// for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] == 1){
+//         console.log(`${arr[i]}st`);
+//     }
+//     else if(arr[i] == 2){
+//         console.log(`${arr[i]}nd`);
+//     }
+//     else if(arr[i] == 3){
+//         console.log(`${arr[i]}rd`);
+//     }
+//     else{
+//         console.log(`${arr[i]}th`);
+//     }
+    
+// }
+
+//Question 34
+// let fav_pizza = ["creamy tikka","chipotle","chicken tikka"];
+// for (let i = 0; i < fav_pizza.length; i++) {
+//     console.log(`I like ${fav_pizza[i]} pizza`);
+// }
+// console.log("What pizza do you like?");
+
+// //Question 35
+// let animals = ['dog', 'cat', 'rabbit'];
+// for (let i = 0; i < 3 ; i++) {
+//     console.log(`A ${animals[i]} would make a great pet.`);
+// }
+// console.log("Any of these animals would make a great pet!");
+
+//Question 36
+// function make_shirt(size: string, message: string): void {
+//     console.log(`The shirt size is ${size} and it will have the following message: "${message}".`);
+// }
+// make_shirt('medium', 'Hello, world!');
+
+//Question 37
+// function make_shirt(size: string = 'large', message: string = 'I love TypeScript'): void {
+//     console.log(`The shirt size is ${size} and it will have the following message: "${message}".`);
+// }
+// make_shirt();
+// make_shirt('medium');
+// make_shirt('small', 'Hello, world!');
+
+
+//Question 38
+// function describe_city(city: string, country: string = 'Pakistan'): void {
+//     console.log(`${city} is in ${country}.`);
+// }
+// describe_city('Karachi');
+// describe_city('London', 'United Kingdom');
+// describe_city('New York', 'USA');
+
+//Question 39
+// function city_country(city: string, country: string): string {
+//     return `${city}, ${country}`;
+// }
+// console.log(city_country('Lahore', 'Pakistan'));
+// console.log(city_country('Paris', 'France'));
+// console.log(city_country('New York', 'USA'));
+
+
+//Question 40
+function make_album(artist: string, title: string, tracks?: number): { artist: string, title: string, tracks?: number } {
+    let album: { artist: string, title: string, tracks?: number } = {
+        artist: artist,
+        title: title
+    };
+    if (tracks) {
+        album.tracks = tracks;
+    }
+    return album;
+}
+let album1 = make_album('Artist1', 'Album1');
+let album2 = make_album('Artist2', 'Album2', 12);
+let album3 = make_album('Artist3', 'Album3', 8);
+console.log(album1);
+console.log(album2);
+console.log(album3);
